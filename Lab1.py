@@ -150,5 +150,104 @@ list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
 list3 = list1 + list2
 print(list3)
-#
+#-------------------------
+#tuples
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:5])
+#list and append (update tuple)
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+#tuple and key
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+(green, *tropic, red) = fruits
+print(green)
+print(tropic)
+print(red)
+#tuple and loops
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple):
+  print(thistuple[i])
+  i = i + 1
+#---------------------------
+#set
+#set and difference
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.difference_update(y)
+print(x)
+#------------------------------------
+#dictionaries
+#dic and direct element
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+#dic more than 1 par
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+print(thisdict)
+#dic and loop
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.values():
+  print(x)
+for x in thisdict.keys():
+  print(x)
+for x, y in thisdict.items():
+  print(x, y)
+#dic and set
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.setdefault("model", "Bronco")
+print(x)
+x = car.setdefault("color", "Brown")
+print(x)
+#dic and get
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(car.get("model")
+)
+#--------------------------------------
+#if else
+a = 33
+b = 200
+if b > a:
+  print("WOW")
 
+x = 5464
+if x > 10:
+  print("Above ten,")
+  if x > 20:
+    print("and also above 20!")
+    if x > 1000:
+        print("Seriously?")
+  else:
+    print("but not above 20.")
+
+a = 200
+b = 33
+c = 500
+if a > b or a > c:
+  print("At least one of the conditions is True")
+
+a = 2
+b = 330
+print("A") if a > b else print("B")
