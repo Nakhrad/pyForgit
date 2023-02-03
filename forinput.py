@@ -1,5 +1,5 @@
 #for input
-b[2][3]
+b
 for i in range(2):
     for j in range(3):
         abc = input()
