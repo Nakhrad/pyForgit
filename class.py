@@ -33,36 +33,37 @@
 # print("Area: " + str(Area.area()))
 #4##########################################
 #5##########################################
-# class Account:
-#     def __int__(self, owner, put, balance, witte):
+# class Account():
+#     def __init__(self, owner, balance):
 #         self.owner = owner
 #         self.balance = balance
-#         self.put = put
-#         self.witte = witte
-#
-#         def deposite(self):
-#             print(f"Hello {self.owner}, you put {self.put}$ and with {self.witte}$, now you has {self.balance}$")
-#
-# owner = "NAE"#input("Name:")
-# put = 555 #int(input("Sum:"))
-# witte = 5 #int(input("Sum to with:"))
-# balance = put - witte
-# pp = Account(owner, put, balance, witte)
-# pp.deposite()
+#     def deposit(self, dep):
+#         self.balance += dep
+#         print(f"{self.owner}, the operation was successful!\nYour balance is {self.balance}")
+#     def withdraw(self, wit):
+#         self.balance -= wit
+#         print(f"{self.owner}, the operation was successful!\nYour balance is {self.balance}")
+# print("Please, write your name and balance. Press 'enter' to continue...")
+# owner1 = Account(input("Account owner's name: "), int(input("Balance: ")))
+# str1 = input("Write Withdraw or Deposit: ")
+# if str1 == "Withdraw":
+#     owner1.withdraw(int(input("Write the amount: ")))
+# if str1 == "Deposit":
+#     owner1.deposit(int(input("Write the amount: ")))
 #6##########################################
-# class prime:
-#     def __int__(self, nums1):
-#         self.nums1 = nums
-#         self.list = []
-#     def check(self, nums1):
-#         for i in nums1:
-#             a = 0
-#             for j in range(2, i):
-#                 if i // j == i / j:
-#                     a += 1
-#             if a < 1:
-#                 list.append(i)
-#             return list
-# nums = list(map(int,input().split()))
-# print = prime(nums)
-# print.check(nums)
+class prime:
+    def __int__(self, nums1):
+        self.nums1 = nums1
+        self.list1 = []
+    def check(self):
+        for i in nums1:
+            a = 0
+            for j in range(2, i):
+                if i // j == i / j:
+                    a += 1
+            if a < 1:
+                list1.append(i)
+            print(list1)
+nums1 = list(map(int,int(input().split())))
+print1 = prime(nums1)
+print1.check()
