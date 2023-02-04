@@ -51,19 +51,20 @@
 # if str1 == "Deposit":
 #     owner1.deposit(int(input("Write the amount: ")))
 #6##########################################
-class prime:
-    def __int__(self, nums1):
-        self.nums1 = nums1
-        self.list1 = []
-    def check(self):
-        for i in nums1:
-            a = 0
-            for j in range(2, i):
-                if i // j == i / j:
-                    a += 1
-            if a < 1:
-                list1.append(i)
-            print(list1)
-nums1 = list(map(int,int(input().split())))
-print1 = prime(nums1)
-print1.check()
+# class Prime():
+#     def __init__(self, list1):
+#         self.list1 = list1
+#     def is_prime(self):
+#         list12 = []
+#         for i in self.list1:
+#             x = 0
+#             for j in range(2, (i // 2) + 1):
+#                 if i % j == 0:
+#                     x += 1
+#             if x == 0:
+#                 list12.append(i)
+#         return list12
+#
+# list11 = list(map(int, input().split()))
+# fun = Prime(list11)
+# print(fun.is_prime())
