@@ -42,14 +42,26 @@ import re
 #     if m:
 #         print(x, m)
 #6######################################################
-f = open("rox.txt", "r", encoding='utf-8')
-for x in f:
-    d = re.sub(" ", "|", x)
-    if d:
-        print(d)
-    a = re.sub(".", "|", x)
-    if a:
-        print(a)
-    e = re.sub(",", "|", x)
-    if e:
-        print(e)
+# f = open("rox.txt", "r", encoding='utf-8')
+# for x in f:
+#     print(re.sub("[ ,.]", ":", x))
+#7####################################################
+# f = open("rox.txt", "r", encoding='utf-8')
+# for x in f:
+#     print(re.sub("[_]", "", x))
+#8####################################################
+# f = open("rox.txt", "r", encoding='utf-8')
+# for x in f:
+#     print(re.split("[A-Z]", x))
+#9###################################################
+# f = open("rox.txt", "r", encoding='utf-8')
+# for x in f:
+#     xa = re.sub(r"(\w)([A-Z])", r"\1 \2", x)
+#     print(xa)
+#10####################################################
+f = open("rox.txt", "r", encoding = 'utf-8')
+for i in f:
+    def camel_to_snake(text):
+        str1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', text)
+        return re.sub('([a-z0-9])([A-Z])', r'\1_\2', str1).lower()
+    print(camel_to_snake(i))
