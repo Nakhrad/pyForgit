@@ -59,7 +59,7 @@ import re
 #     xa = re.sub(r"(\w)([A-Z])", r"\1 \2", x)
 #     print(xa)
 #10####################################################
-d = open("rox.txt", "r", encoding = 'utf-8')
+d = open("rox.txt", "r", encoding ='utf-8')
 for i in d:
     def camel_to_snake(text):
         str1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', text)
