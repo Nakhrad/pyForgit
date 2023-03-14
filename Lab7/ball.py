@@ -2,7 +2,7 @@ import pygame
 pygame.init()
 
 monic = pygame.display.set_mode((600,400))
-pygame.display.set_caption("CLock")
+pygame.display.set_caption("Japan")
 x = 100
 y = 100
 c = True
