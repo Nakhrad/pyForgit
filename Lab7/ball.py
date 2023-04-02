@@ -12,13 +12,13 @@ while c:
             check = False
             pygame.quit()
         if i.type == pygame.KEYDOWN:
-            if i.key == pygame.K_LEFT:
+            if i.key == pygame.K_LEFT and x > 25:
                 x = x - 20
-            if i.key == pygame.K_RIGHT:
+            if i.key == pygame.K_RIGHT and x > 570:
                 x = x +20
-            if i.key == pygame.K_UP:
+            if i.key == pygame.K_UP and y > 25:
                 y = y -20
-            if i.key == pygame.K_DOWN:
+            if i.key == pygame.K_DOWN and y > 370:
                 y = y+20
     monic.fill((255, 255, 255)) # kраска
     circle = pygame.draw.circle(monic, "Red", (x, y), 25)
