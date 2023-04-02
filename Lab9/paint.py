@@ -23,7 +23,6 @@ BLUE = (0, 0, 255)
 # Set up the default values
 brush_size = 10
 brush_color = WHITE
-eraser_size = 20
 
 def roundline(canvas, color, start, end, radius=1) :
     Xaxis = end[0] - start[0]
@@ -70,16 +69,15 @@ try :
                 pygame.draw.rect(screen, brush_color, (rect_pos, (rect_width, rect_height)))
             elif e.key == pygame.K_t:
                 # Draw a square
-                rect_pos = pygame.mouse.get_pos()
-                rect_width = 50
-                rect_height = 50
-                pygame.draw.rect(screen, brush_color, (rect_pos, (rect_width, rect_height)))
+                square_pos = pygame.mouse.get_pos()
+                square_width = 50
+                square_height = 50
+                pygame.draw.rect(screen, brush_color, (square_pos, (square_width, square_height)))
             if e.key == pygame.K_y:
                 # Draw a triangle
-                rect_pos = pygame.mouse.get_pos()
-                rect_width = 50
-                rect_height = 50
-                pygame.draw.polygon(screen, brush_color, ((25,75+int(rect_pos)),(320,125),(250,375)))
+                triangle_pos = pygame.mouse.get_pos()
+                triangle_height = 50
+                pygame.draw.polygon(screen, brush_color, (triangle_pos, (10, 10), (10, 10), (10, 10)))#(triangle_height, triangle_height), (triangle_height, triangle_height), (triangle_height, triangle_height)
             # if e.key == pygame.K_u:
             #     # Draw a rhombus
             #     rect_pos = pygame.mouse.get_pos()
