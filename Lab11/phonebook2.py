@@ -68,9 +68,10 @@ def connect():
         # print('Connecting to the PostgreSQL database...')
         conn = psycopg2.connect(
             host="127.0.0.1",
-            database="phoneBook",
+            database="postgres",
             user="postgres",
-            password="$F00tba11")
+            port="2004",
+            password="Darhani2004")
 
         # Autocommit to database
         conn.autocommit = True

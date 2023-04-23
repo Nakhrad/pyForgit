@@ -9,9 +9,11 @@ def connect():
         # print('Connecting to the PostgreSQL database...')
         conn = psycopg2.connect(
             host="127.0.0.1",
-            database="phoneBook",
+            database="postgres",
             user="postgres",
-            password="$F00tba11")
+            port="2004",
+            password="Darhani2004")
+
 
         # Autocommit to database
         conn.autocommit = True
@@ -43,24 +45,6 @@ def connect():
 
             cur.execute(sql,(input("Enter Contact Name: \n"), input("Enter Contact Number: \n")))
             print("Your Contact Saved Successfully!\n")
-        # if choose == 'C':
-            # cur.execute("""/copy (SELECT * FROM csv_table) to 'C:\\Users\\zhasl\\PycharmProjects\\pythonProject\\Lab10\\data\\csv_table' with csv""")
-            # cur.execute("""COPY csv_table(contact_name, contact_number)
-            #                FROM 'C:\\Users\\zhasl\\PycharmProjects\\pythonProject\\Lab10\\data\\csv_table.csv'
-            #                DELIMITER ','
-            #                CSV HEADER;""")
-            # for i in cur.fetchall():
-            #     print(i)
-            # file = open('data\\csv_table')
-            # contents = csv.reader(file)
-            # insert_records = "INSERT INTO phone_book(contact_name, contact_number) VALUES(?, ?)"
-            # cur.executemany(insert_records, contents)
-            # select_all = "SELECT * FROM phone_book"
-            # rows = cur.execute(select_all).fetchall()
-            #
-            # # Output to the console screen
-            # for r in rows:
-            #     print(r)
 
         # Update Data
         elif choose == 'U1':
